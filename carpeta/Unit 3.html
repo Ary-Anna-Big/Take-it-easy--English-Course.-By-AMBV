@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Take it easy! English Course.</title>
+    <style>
+      body {
+        font-family: Georgia, "Times New Roman";
+        margin: 0;
+        padding: 0;
+        background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+        /* Gradient background from top to bottom */
+      }
+
+      header {
+        background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+
+      img {
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Take it easy! English Course.</h1>
+    </header>
+    <main>
+      <section id="unit3">
+        <h2>Unit 3 - Interactive Communication</h2>
+        <h3>Unit Objectives:</h3>
+        <ul>
+          <li>
+            Develop comprehensive communication skills in English, including speaking, listening, and cultural understanding, through interactive activities and engaging discussions.
+        </li>
+          <li>
+            Foster confidence and fluency in real-life conversational contexts by practicing interactive conversations, listening comprehension, and exploring diverse cultural perspectives.
+        </li>
+          <li>
+            Enhance language proficiency and intercultural communication competencies to effectively engage with English speakers from different backgrounds and cultures. 
+          </li>
+        </ul>
+        <article>
+          <h3>Class 7: Interactive Conversations</h3>
+          <h4>Objectives: 
+            Develop conversational skills by engaging in interactive dialogues.
+            Practice asking and answering questions in various social contexts.
+            Improve fluency and confidence in speaking English through interactive sessions.
+          </h4>
+          <h3>Class 8: Developing Listening and Comprehension Skills</h3>
+          <h4>
+            Objectives:
+            Enhance listening comprehension abilities in English.
+            Practice identifying main ideas, details, and implied meanings in spoken conversations.
+            Develop strategies for effective listening, such as note-taking and active listening techniques.
+          </h4>
+          <h3>Class 9: Exploring Culture and Diversity Through English</h3>
+          <h4>Objectives:
+            Gain awareness and understanding of cultural diversity through English language activities.
+            Explore cultural norms, customs, and traditions from different English-speaking regions.
+            Foster cultural sensitivity and empathy by engaging with diverse perspectives and experiences.
+          </h4>
+          <p>
+            These units will be conducted synchronously through Zoom.
+           </p>
+          <h3>Class 10: Final Review and Unit Evaluation</h3>
+          <h4>Objectives:
+            Review key concepts, vocabulary, and skills covered in Unit 3.
+            Assess student progress and learning outcomes through a comprehensive unit evaluation.
+            Provide feedback and reflection opportunities to enhance future language learning strategies.
+          </h4>
+
+<title>English Proficiency Final Exam</title>
+</head>
+<body>
+  <h2>Oral Exam</h2>
+  <ol>
+    <li>
+      <h3>Presentation</h3>
+      <p>Introduce yourself including information about your name, age, gender, nationality, occupation, and favorite color. Use the verb "to be" correctly.</p>
+    </li>
+    <li>
+      <h3>Question and Answer</h3>
+      <p>Take turns asking and answering questions about the information presented in the introductions. Use the verb "to be" and vocabulary related to the exam objectives.</p>
+    </li>
+  </ol>
+        <img src="C:\Users\Lenovo\OneDrive\Escritorio\Take it easy, English Course. By AMBV. files\oral exam online.webp" width="300" height="300" class="center" alt="(Redirect Notice, s. f.)">
+  <h2>Written Exam</h2>
+  <ol>
+    <li>
+      <h3>Fill in the Blanks</h3>
+      <p>Complete the sentences with the correct form of the verb "to be" (am, is, are).</p>
+    </li>
+    <li>
+      <h3>Vocabulary Matching</h3>
+      <p>Match the vocabulary words with their corresponding definitions.</p>
+      <form id="matchingForm">
+        <ul>
+          <!-- Vocabulary word and definition pairs -->
+          <li>
+            <label for="tradition">tradition:</label>
+            <input type="text" id="tradition" name="tradition">
+            <label for="relating to Somalia, the Somalis, or their language.">relating to Somalia, the Somalis, or their language.</label>
+            <input type="text" id="relating to Somalia, the Somalis, or their language." name="relating to Somalia, the Somalis, or their language.">
+          </li>
+          <li>
+            <label for="Somali">Somali:</label>
+            <input type="text" id="Somali" name="Somali">
+            <label for="transmission of customs or beliefs from generation to generation, or the fact of being passed on in this way.">transmission of customs or beliefs from generation to generation, or the fact of being passed on in this way.</label>
+            <input type="text" id="transmission of customs or beliefs from generation to generation, or the fact of being passed on in this way." name="transmission of customs or beliefs from generation to generation, or the fact of being passed on in this way.">
+          </li>
+          <!-- Add more pairs as needed -->
+        </ul>
+        <button type="button" onclick="checkMatching()">Check Matching</button>
+      </form>
+    </li>
+    <li>
+      <h3>Descriptive Writing</h3>
+      <p>Write a paragraph describing a person including details about their age, gender, nationality, occupation, and favorite color.</p>
+      <input type="text" name="q2" placeholder="Enter your answer">
+    </li>
+    <li>
+      <h3>Conversation Dialogue</h3>
+      <p>Write a dialogue between two people meeting for the first time. Include introductions with information about name, age, nationality, occupation, and favorite color. Use the verb "to be" correctly.</p>
+      <input type="text" name="q3" placeholder="Enter your answer">
+    </li>
+  </ol>
+   
+ <!-- Results Display -->
+ <div id="matchingResults"></div>
+      
+ <script>
+   document.getElementById('checkMatchingBtn').addEventListener('click', checkMatching);
+
+   function checkMatching() {
+     const form = document.getElementById('matchingForm');
+     const matchingPairs = form.querySelectorAll('ul#matchingPairs li');
+     const matchingResults = document.getElementById('matchingResults');
+     let correctCount = 0;
+     let feedback = '<h2>Results</h2><ul>';
+     matchingPairs.forEach(pair => {
+       const word = pair.querySelector('input[name^="word"]').value.toLowerCase().trim();
+       const definition = pair.querySelector('input[name^="definition"]').value.toLowerCase().trim();
+       if (word === definition) {
+         correctCount++;
+         feedback += `<li>${word} matches ${definition} - Correct!</li>`;
+       } else {
+         feedback += `<li>${word} does not match ${definition} - Incorrect.</li>`;
+       }
+     });
+     feedback += `</ul><p>Total Correct Matches: ${correctCount} out of ${matchingPairs.length}</p>`;
+     matchingResults.innerHTML = feedback;
+   }
+ </script>
+
+  <!-- Rubric Chart -->
+  <h2>Rubric Criteria</h2>
+  <table border="1">
+    <tr>
+      <th>Criteria</th>
+      <th>Oral Exam</th>
+      <th>Written Exam</th>
+    </tr>
+    <tr>
+      <td>Correct Use of Verb "to be"</td>
+      <td>05</td>
+      <td>05</td>
+    </tr>
+    <tr>
+      <td>Accuracy of Vocabulary Usage</td>
+      <td>05</td>
+      <td>05</td>
+    </tr>
+    <tr>
+      <td>Clarity and Coherence</td>
+      <td>05</td>
+      <td>05</td>
+    </tr>
+    <tr>
+      <td>Grammar and Spelling</td>
+      <td>05</td>
+      <td>05</td>
+    </tr>
+  </table>
+</body>

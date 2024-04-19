@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Take it easy! English Course.</title>
+    <style>
+      body {
+        font-family: Georgia, "Times New Roman";
+        margin: 0;
+        padding: 0;
+        background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+        /* Gradient background from top to bottom */
+      }
+
+      header {
+        background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+
+      img {
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Take it easy! English Course.</h1>
+    </header>
+    <main>
+      <section id="unit2">
+        <h2>Unit 2 - Expanding Vocabulary</h2>
+        <article>
+          <h3>Class 5: Learning Additional Vocabulary</h3>
+          <h3>Objectives:</h3>
+          <p>
+            In this class, students will expand their vocabulary with new words
+            and phrases.
+          </p>
+          <iframe
+            src="C:\Users\Lenovo\Downloads\Adjectives Presentation in Pink Blue Bold Style .pdf"
+            width="100%"
+            height="500 px"
+          ></iframe>
+
+          <h1>Quiz: Learning Additional Vocabulary</h1>
+          <form id="quizForm">
+            <div class="question">
+              <p>1. The word "house" means a large building.</p>
+              <div class="answers">
+                <label><input type="radio" name="q1" value="true" />True</label
+                ><br />
+                <label
+                  ><input type="radio" name="q1" value="false" />False</label
+                >
+              </div>
+            </div>
+            <div class="question">
+              <p>2. "Happy" is an adjective that describes a sad feeling.</p>
+              <div class="answers">
+                <label><input type="radio" name="q2" value="true" />True</label
+                ><br />
+                <label
+                  ><input type="radio" name="q2" value="false" />False</label
+                >
+              </div>
+            </div>
+            <div class="question">
+              <p>3. Choose the correct meaning of the word "amazing":</p>
+              <div class="answers">
+                <label><input type="radio" name="q3" value="a" />Boring</label
+                ><br />
+                <label><input type="radio" name="q3" value="b" />Exciting</label
+                ><br />
+                <label><input type="radio" name="q3" value="c" />Sad</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>4. The word "book" refers to a type of fruit.</p>
+              <div class="answers">
+                <label><input type="radio" name="q4" value="true" />True</label
+                ><br />
+                <label
+                  ><input type="radio" name="q4" value="false" />False</label
+                >
+              </div>
+            </div>
+            <div class="question">
+              <p>5. "Fast" is an adverb that describes speed.</p>
+              <div class="answers">
+                <label><input type="radio" name="q5" value="true" />True</label
+                ><br />
+                <label
+                  ><input type="radio" name="q5" value="false" />False</label
+                >
+              </div>
+            </div>
+            <div class="question">
+              <p>
+                6. Which of the following words means "friendly and pleasant":
+              </p>
+              <div class="answers">
+                <label><input type="radio" name="q6" value="a" />Angry</label
+                ><br />
+                <label><input type="radio" name="q6" value="b" />Nice</label
+                ><br />
+                <label><input type="radio" name="q6" value="c" />Sad</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>7. What is the opposite of the word "big"?</p>
+              <div class="answers">
+                <label><input type="radio" name="q7" value="a" />Large</label
+                ><br />
+                <label><input type="radio" name="q7" value="b" />Small</label
+                ><br />
+                <label><input type="radio" name="q7" value="c" />Huge</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>8. "Quiet" is an antonym of:</p>
+              <div class="answers">
+                <label><input type="radio" name="q8" value="a" />Noisy</label
+                ><br />
+                <label><input type="radio" name="q8" value="b" />Silent</label
+                ><br />
+                <label><input type="radio" name="q8" value="c" />Loud</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>9. Which word means "the ability to do something easily"?</p>
+              <div class="answers">
+                <label
+                  ><input type="radio" name="q9" value="a" />Difficult</label
+                ><br />
+                <label><input type="radio" name="q9" value="b" />Easy</label
+                ><br />
+                <label><input type="radio" name="q9" value="c" />Hard</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>10. The word "happy" is a noun.</p>
+              <div class="answers">
+                <label><input type="radio" name="q10" value="true" />True</label
+                ><br />
+                <label
+                  ><input type="radio" name="q10" value="false" />False</label
+                >
+              </div>
+            </div>
+            <button type="button" onclick="checkQuiz()">Submit Quiz</button>
+          </form>
+          <div id="quizResults"></div>
+
+          <script>
+            function checkQuiz() {
+              const form = document.getElementById("quizForm");
+              const quizResults = document.getElementById("quizResults");
+              const score = calculateScore(form);
+              quizResults.innerHTML = `Your score: ${score} / 10`;
+            }
+
+            function calculateScore(form) {
+              let score = 0;
+              const correctAnswers = [
+                "true",
+                "false",
+                "b",
+                "false",
+                "true",
+                "b",
+                "b",
+                "b",
+                "b",
+                "false",
+              ];
+              for (let i = 0; i < form.elements.length; i++) {
+                const element = form.elements[i];
+                if (
+                  element.type === "radio" &&
+                  element.checked &&
+                  element.value === correctAnswers[i]
+                ) {
+                  score++;
+                }
+              }
+              return score;
+            }
+          </script>
+        </article>
+
+        <article>
+          <h3>Class 6: Pronunciation and Intonation Exercises</h3>
+          <h3>Objectives:</h3>
+          <p>
+            Students will practice correct pronunciation and intonation in
+            English.
+          </p>
+          <a>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/tzh3Owutf5Y?si=33lJ-h8IA1SN1KA5&amp;controls=0"
+              title="Pronunciation and Intonation Exercises"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </a>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

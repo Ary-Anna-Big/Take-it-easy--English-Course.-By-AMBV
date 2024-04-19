@@ -1,0 +1,63 @@
+body {
+  font-family: Georgia, "Times New Roman";
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+  /* Gradient background from top to bottom */
+}
+
+header {
+  background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  background-image: linear-gradient(#f68084 100%);
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+  background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  /* Add smooth transition effect */
+  box-align: center;
+}
+
+section:hover {
+  background-color: #f0f0f0; /* Change background color on hover */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Add box shadow on hover */
+  transform: scale(1.05); /* Increase box size on hover */
+}
+
+footer {
+  background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+img {
+  border-radius: 8px;
+}
